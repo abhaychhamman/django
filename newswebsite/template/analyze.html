@@ -1,0 +1,68 @@
+{% extends "base.html" %} 
+ 
+
+{% block heading %}
+  <h2  class="trending_news">Trending News</h2> 
+
+  <a class="likebutton" id="like{{post.id}}" href="#" data-catid="1">Like</a>
+  
+{% for i in items %}
+ 
+
+
+{% if forloop.counter|divisibleby:2  %}
+ 
+
+<div class="abhay cont_rev ">
+ {% else %}
+     
+<div class="abhay ">
+
+{% endif %}
+
+
+  <img src="{{ i.image.url }}" alt=""    class="img_news">
+ 
+ 
+ <div class="body_cont  ">
+ 
+
+    <h2 class="news_text"><b>{{ i.title }}</b></h2>
+    <p class="news_text news_text_body" style="color: #0f073a;  ">{{ i.body }}</p>
+
+
+
+  </div>
+
+</div>
+
+{% endfor %}
+ 
+
+  <!-- <img src=" {{ image_url}}" alt=""  height="300px" width="300px"> -->
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+$('.likebutton').click(function(){
+var catid;
+catid = $(this).attr("data-catid");
+$.ajax(
+{
+    type:"GET",
+    url: "/likepost",
+    data:{
+             post_id: catid
+    },
+    success: function( data ) 
+    {
+        $( '#like'+ catid ).remove();
+        $( '#message' ).text(data);
+    }
+ })
+</script>

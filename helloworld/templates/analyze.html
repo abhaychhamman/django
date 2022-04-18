@@ -1,11 +1,39 @@
 {% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/index.css' %}">
+ 
 
-{% block content %}
-  <h1  class="search_everything">Local Library Home</h1> 
+
+
+{% block heading %}
+  <h2  class="trending_news">Trending News</h2> 
+ 
+{% for i in items %}
+ 
+<h1>{{ i.title }}</h1>
+
+<div class="abhay">
+
+  <img src="{{ i.image.url }}" alt=""  height="200px" width="200px">
+
+<p>{{ i.description }}</p>
+
+</div>
+
+{% endfor %}
+ 
+
+  <!-- <img src=" {{ image_url}}" alt=""  height="300px" width="300px"> -->
 {% endblock %}
 
 
-{% block abhay %}
-   
-  <p>Welcome to LocaabhaylLibrary, a wedtdfgbsite developed by <em>Mozilla Developer Network</em>!</p>
+{% block content %}
+
+
+
+
+
+
+
+
 {% endblock %}

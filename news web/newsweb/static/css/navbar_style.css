@@ -1,0 +1,90 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(180, 180, 180);
+}
+
+.navbar{
+
+position: fixed;
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+background-color: rgb(43, 40, 40);
+height: 40px;
+color: white;
+padding: 3px;
+
+
+
+
+}
+.logo{
+
+font-family: 'My Soul', cursive;
+font-weight: 1000;
+color: rgb(119, 224, 93);
+}
+
+
+
+li {
+
+list-style: none;
+text-transform: capitalize;
+
+}
+
+li a{
+color: white;
+text-decoration: none;
+}
+
+i{
+width: 20px;
+height: 20px;
+color: white;
+}
+i:hover{
+width: 20px;
+
+color: rgb(147, 145, 240);
+}
+i:active{
+width: 20px;
+height: 20px;
+color: rgb(233, 32, 32);
+}
+
+
+.margin{
+
+ 
+    width: 200px;
+    height: 72px;
+}
+
+
+.navbar h3 a{
+    color: springgreen;
+}
+.navbar h3 a:hover{
+    color: rgb(255, 115, 0);
+    text-decoration: none;
+      
+}
+
+.navbar h3 a:active{
+    color: rgb(39, 30, 177);
+}
+
+.navbar li a:hover{
+    color: rgb(111, 101, 247);
+    text-decoration: underline;
+}

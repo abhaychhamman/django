@@ -6,6 +6,17 @@
     align-items: center;
 
 }
+
+.abhay
+
+{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    width: 640px;
+
+
+}
 .link_icon{
     list-style: none;
     width: 35%;
@@ -48,8 +59,9 @@
      width:25%;
 }
  
+
  
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1030px) {
     .navbar-nav{
  
         width: 100%;

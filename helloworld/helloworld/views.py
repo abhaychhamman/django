@@ -7,8 +7,57 @@ from django.shortcuts import render
  
 
 def index(request):
-    # return HttpResponse("<h1>abhay</h1> kumar isngh ")
-    return render(request,"analyze.html")
+    
+
+# ******************* trending news **************************
+
+    import json
+    import requests
+
+    url = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI"
+
+    querystring = {"pageNumber":"1","pageSize":"50","withThumbnails":"false","location":"india"}
+
+    headers = {
+        'x-rapidapi-host': "contextualwebsearch-websearch-v1.p.rapidapi.com",
+        'x-rapidapi-key': "066ad0e562mshf1cc56af4b67393p1cf041jsnd2a8c95bf42c"
+        }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+# # print(type(response.text.encode('utf-8')))
+    es=response.text.encode('utf-8')
+    res = json.loads(es)
+    # [u'totalCount', u'_type', u'relatedSearch', u'value', u'didUMean']
+    # print(50*"-")
+    # print(res['value'][0]['body'])
+    # print(50*"-")
+    # print(res['value'][0]['description'])
+    # print(50*"-")
+    # print(res['value'][0]['title'])
+    # print(50*"-")
+    # print(res['value'][0]['language'])
+    # print(50*"-")
+    # print("this is image",res['value'][0]['image'])
+    # print(50*"-")
+    # print(res['value'][0]['datePublished'])
+    # print(50*"-")
+    # print(res['value'][0]['snippet'])
+    # print(50*"-")
+    # print(res['value'][0]['isSafe'])
+    # print(50*"-")
+    # print(res['value'][0]['provider'])
+    # print(50*"-")
+    # print(res['value'][0]['id'])
+    # print(50*"-")
+    # print(res['value'][0]['keywords'])
+    # print(50*"-")
+    # print(type(res['value'][0]))
+    
+    # [u'body', u'description', u'language', u'title', u'url', u'image', u'datePublished', u'snippet', u'isSafe', u'provider', u'keywords', u'id']
+    # params={'body':res['value'][0]['body'],'description':res['value'][0]['description'],'title':res['value'][0]['title'],'url':res['value'][0]['url'],'image_url':res['value'][0]['image']['url'],'body':res['value'][0]['body'],'body':res['value'][0]['body'],'datePublished':res['value'][0]['datePublished'],'analyzed_text':'this is all right'}
+    params={'items':res['value']}
+    return render(request,"analyze.html",params)
     
 def analyze(request):
     # get the text
