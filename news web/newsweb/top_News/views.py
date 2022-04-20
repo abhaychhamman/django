@@ -26,7 +26,7 @@ def top_news(request):
                 "GET", url, headers=headers, params=querystring)
         # request for api
         res = json.loads(response.text)
-        print(res['value'][1]['image']['url'])
+        print(res['value'][4])
         context = {
                 'key':'Top News',
                 'news_res': res['value']

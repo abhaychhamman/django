@@ -1,9 +1,9 @@
 
 {%for n_news in news_res%}
 
-{%ifnotequal n_news.content  ""   %}
+{%ifnotequal n_news.body  ""   %}
 
-<h1 class="titile">{{n_news.title}}</h1>
+<h1 class="title">{{n_news.title}}</h1>
 <h3 class="description">{{n_news.description}}</h3>
 <div class="contain_news">
   <div class="body">
@@ -15,12 +15,13 @@
    
 
 </div>
-{% endifnotequal %}
-
-
 <br>
 <br>
 <br>
 <hr>
+{% endifnotequal %}
+
+
+
 
 {% endfor %}

@@ -1,17 +1,19 @@
 *{
 
     margin: 0;
+ 
     padding: 0;
+    text-align: justify;
 }
 
 body{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar{
 
 position: fixed;
-
+font-family: sans-serif;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -27,7 +29,7 @@ padding: 3px;
 }
 .logo{
 
-font-family: 'My Soul', cursive;
+font-family: 'My Soul', cursive  !important;
 font-weight: 1000;
 color: rgb(119, 224, 93);
 }

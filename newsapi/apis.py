@@ -5,7 +5,7 @@ import json
 
 
 
-# url = "https://quotes15.p.rapidapi.com/quotes/random"
+url = "https://quotes15.p.rapidapi.com/quotes/random"
 
 # https://v2.jokeapi.dev/joke/Any?amount=20
 # url = " https://cricket-api.vercel.app/cri.php?url=https://www.cricbuzz.com/live-cricket-scores/46011/"
@@ -63,7 +63,7 @@ import json
  
 import requests
 
-url = "https://dad-jokes.p.rapidapi.com/random/joke"
+# url = "https://dad-jokes.p.rapidapi.com/random/joke"
 
 headers = {
 	"X-RapidAPI-Host": "dad-jokes.p.rapidapi.com",
