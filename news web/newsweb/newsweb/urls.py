@@ -25,5 +25,6 @@ urlpatterns = [
     path('',include('Memes.urls')),
     path('',include('Jokes.urls')),
     path('',include('Quotes.urls')),
+    path('',include('Profile.urls')),
     path('',include('top_News.urls'))
 ]

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'TrendingNews',
     'Jokes',
     'Quotes',
+    'Profile',
     'Memes'
     
 ]
