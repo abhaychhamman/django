@@ -26,11 +26,12 @@ def register(request):
     return render(request, 'user/user.html', context)  
 
 def profile(request):
+    print(request.user.is_authenticated)
     if request.user.is_authenticated:
         return   render(request, 'user/profile.html')
 
     else:
-        return render(request,"user/login.html")    
+        return HttpResponseRedirect('/login/')   
 def login_page(request):
     if request.method=='POST':
         fm=AuthenticationForm(request=request,data=request.POST)
@@ -40,10 +41,11 @@ def login_page(request):
             user=authenticate(username=uname,password=upass)
             if user is not None:
                 login(request,user)
-                return HttpResponseRedirect('/register/')
+                print(request.user.is_authenticated)
+                return HttpResponseRedirect('/profile/')
     return   render(request, 'user/login.html',{'form':AuthenticationForm()})  
 
 
-def logout_page(request):
-    logout(request)
-    return   render(request, 'user/login.html',{'form':AuthenticationForm()})
+# def logout_page(request):
+#     logout(request)
+#     return    HttpResponseRedirect('/login/')

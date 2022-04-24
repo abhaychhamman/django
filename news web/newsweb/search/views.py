@@ -23,6 +23,8 @@ def search(request):
 
     return render(request, "search/search.html")
 
+
+
 def fetch_news(key):
     try:
         url = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI"

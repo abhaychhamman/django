@@ -23,12 +23,12 @@ text-align: center;
 
 .form_login input {
 
-    margin: 20px;
-    width: 320px;
+    margin: 20px;  
+    width: 100%;
     background: none;
     color: rgb(0, 0, 0);
-    border: none;
-    border-bottom: 1px solid blue;
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 4px;
     height: 27px;
 }
 
@@ -81,4 +81,16 @@ text-align: center;
 .btn a:hover{
 
     text-decoration:underline;
+}
+.btn{
+
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.label_input{
+ 
+    
+    width: 340px;
+   
 }
