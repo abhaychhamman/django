@@ -1,40 +1,33 @@
-<!DOCTYPE html>
-<html>
+{% extends "search/navbar.html" %} 
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+{% block title %}
+  
+<title>profile</title>
+{% endblock %}
+     
+{% block content %}
+ 
 
-    <style>
+<h3>{{message}}</h3>
+ 
+<form action="" method="post" class="form_login">
+    <h1 id="signup_title">Login</h1>
     
-    </style>
+    <input type="email" placeholder="Email/username" id="email" name="email">
+    <input type="password" placeholder="Password" id="pass" name="pass">
+   <div class="btn">
+        <a href="">Forgot Password</a>
+       <a  href="http://127.0.0.1:8000/signup"   id="signup_btn_re" class="both_btn" name="signup_btn">Sign Up</a>
+       <input type="submit" value="Login" id="slogin" class="both_btn" name="slogin">
 
-</head>
+   </div>
 
-<body>
-
-    <form action="" method="post" class="form_login">
-        <h1 id="signup_title">Login</h1>
-        
-        <input type="email" placeholder="Email/username" id="email" name="email">
-        <input type="password" placeholder="Password" id="pass" name="pass">
-       <div class="btn">
-            <a href="">Forgot Password</a>
-           <input type="submit" value="Signup" id="signup_btn" class="both_btn" name="signup_btn">
-           <input type="submit" value="Login" id="slogin" class="both_btn" name="slogin">
-
-       </div>
-
-    </form>
+</form>
 
 
 
+{% endblock %}
+     
 
-    <script src="" async defer></script>
-</body>
 
-</html>
+ 

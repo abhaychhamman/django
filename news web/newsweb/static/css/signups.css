@@ -1,4 +1,4 @@
-.form_login {
+.form_signup {
 
     display: flex;
     justify-content: center;
@@ -12,16 +12,17 @@
     box-shadow: inset 0 4px 23px rgb(26 18 18 / 82%), 0 0 0 0px rgb(60 60 60), 0.3em 0.3em 1em rgb(209 179 179 / 30%);
 
 }
-.form_login h1 {
+.form_signup h1 {
 
 width: 100%;
 
 font-size: 23px;
 height: 29px;
 text-align: center;
+margin-top: 20px;
 }
 
-.form_login input {
+.form_signup input {
 
     margin: 20px;
     width: 320px;
@@ -32,7 +33,7 @@ text-align: center;
     height: 27px;
 }
 
-.form_login input::placeholder {
+.form_signup input::placeholder {
 
 
     color: rgb(43, 37, 37);
@@ -42,38 +43,32 @@ text-align: center;
 }
 
 #signup_btn {
+    color: rgb(243, 243, 243);
     width: auto;
     border-radius: 5px;
     border: 2px solid black;
-    color: rgb(243, 243, 243);
-    cursor: pointer;
-    padding: -2px 32px 12px 12px;
-    width: 79px;
-    height: 34px;
+  
     background: rgb(32, 30, 30);
-    font-size: 19px;
-    text-align: center;
-    
-    
-}      
-#slogin {
-    color: rgb(243, 243, 243);
-    width: auto;
-    border-radius: 5px;
-    border: 2px solid black;
     cursor: pointer;
     padding: -2px 32px 12px 12px;
-
-background: rgb(0 151 13);
     width: 89px;
     height: 34px;
-    text-align: center;
     font-size: 19px;
+    text-align: center;
 
 
-}
+}      
+  #slogin_re {
+    color: rgb(12 46 177);
+    width: auto;
+  
+    cursor: pointer;
+    padding: -2px 32px 12px 12px;
+    width: 89px;
+    height: 34px;
+    font-size: 19px;
+    text-align: center;
+    
 
-.btn a{
 
-    text-decoration:none;
 }

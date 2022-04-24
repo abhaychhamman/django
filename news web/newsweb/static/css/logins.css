@@ -1,4 +1,4 @@
-.form_signup {
+.form_login {
 
     display: flex;
     justify-content: center;
@@ -12,16 +12,16 @@
     box-shadow: inset 0 4px 23px rgb(26 18 18 / 82%), 0 0 0 0px rgb(60 60 60), 0.3em 0.3em 1em rgb(209 179 179 / 30%);
 
 }
-.form_signup h1 {
+.form_login h1 {
 
 width: 100%;
-
+margin-top: 20px;
 font-size: 23px;
 height: 29px;
 text-align: center;
 }
 
-.form_signup input {
+.form_login input {
 
     margin: 20px;
     width: 320px;
@@ -32,7 +32,7 @@ text-align: center;
     height: 27px;
 }
 
-.form_signup input::placeholder {
+.form_login input::placeholder {
 
 
     color: rgb(43, 37, 37);
@@ -41,34 +41,44 @@ text-align: center;
 
 }
 
-#signup_btn {
-    color: rgb(243, 243, 243);
+#signup_btn_re {
+    color: rgb(12 46 177);
     width: auto;
-    border-radius: 5px;
-    border: 2px solid black;
   
-background: rgb(0 151 13);
     cursor: pointer;
-    padding: -2px 32px 12px 12px;
+    padding: 15px;
     width: 89px;
     height: 34px;
     font-size: 19px;
     text-align: center;
+    
+    
+}    
 
-
-}      
-  #slogin {
+     
+#slogin {
     color: rgb(243, 243, 243);
     width: auto;
     border-radius: 5px;
     border: 2px solid black;
-    background: rgb(32, 30, 30);
     cursor: pointer;
     padding: -2px 32px 12px 12px;
-    width: 79px;
+
+    background: rgb(32, 30, 30);
+    width: 89px;
     height: 34px;
     text-align: center;
     font-size: 19px;
 
 
+}
+
+.btn a{
+
+    text-decoration:none;
+}
+
+.btn a:hover{
+
+    text-decoration:underline;
 }
