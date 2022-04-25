@@ -53,15 +53,25 @@ def fetch_news(key):
         }
     return context
 
+def search_key(list, platform):
+    for i in range(len(list)):
+         
+        if str(list[i]) == platform:
+            return True
+    return False
+    
 
 
 @csrf_exempt
 def save_data(request):
+    all_key=Key.objects.all()
 
     if request.method == "POST":
-        b = Key(key=request.POST['key'])
-        b.save()
-        print(request.POST['key'])
+        a=search_key(all_key,request.POST['key'])
+        if a==False:
+            b = Key(key=request.POST['key'])
+            b.save()
+            
         context=fetch_news(request.POST['key'])
         
 
@@ -70,23 +80,4 @@ def save_data(request):
         return JsonResponse({"status": 'fail'})
 
 
-
-
-
-    #   res=[{
-
-    #         "title":"dkjf ajhg jfa hgjhajg hajdhg jg hajdhg jg hajdhg jad ghjkadhgjd",
-    #         "description":"dkjf ajhg jfa hgjhajg haj ajhg jfa hgjhajg haj ajhg jfa hgjhajg hajdhg jad ghjkadhgjd ",
-    #         "url":"https://github.com/abhaychhamman ",
-    #         "body":"dkjf ajhg jfa hgjhajg hf ajhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhg jad ghjkadhgjd",
-    #         "image_url":"img/logo.jpeg",
-    #     },
-    #     {
-
-    #         "title":"dkjf ajhg jfa hgjhajg hajdhg jg hajdhg jg hajdhg jad ghjkadhgjd",
-    #         "description":"dkjf ajhg jfa hgjhajg haj ajhg jfa hgjhajg haj ajhg jfa hgjhajg hajdhg jad ghjkadhgjd ",
-    #         "url":"https://github.com/abhaychhamman ",
-    #         "body":"dkjf ajhg jfa hgjhajg hf ajhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhjhg jfa hgjhajg hajdhg jad ghjkadhgjd",
-    #         "image_url":"img/logo.jpeg",
-    #     }
-    #     ]
+ 

@@ -90,3 +90,30 @@ color: rgb(233, 32, 32);
     color: rgb(111, 101, 247);
     text-decoration: underline;
 }
+
+.footer{
+        
+    background-color:#2b2828;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    top: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.body_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    
+   
+}
+
+.body_footer  a{
+   text-decoration: none;
+   color: white;
+    
+   
+}
